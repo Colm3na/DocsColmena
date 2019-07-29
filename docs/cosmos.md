@@ -123,8 +123,6 @@ Se le pedirá que introduzca una frase de contraseña que se utiliza para cifrar
 
     > Ej:
     `./balance`
-
-
 --- 
 
 ## Validador
