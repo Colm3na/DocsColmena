@@ -21,7 +21,7 @@ With this package you can have your own Cosmos full node and host your own clone
 
 > Latest version of the package (**0.1.1**) maintained by [La ColmenaSvQ](https://github.com/Colm3na)
 
-> [Manifest.](dappnode_package.json)
+> [Manifest.](https://github.com/Colm3na/DAppNodePackage-cosmos/blob/master/dappnode_package.json)
 
 
 
