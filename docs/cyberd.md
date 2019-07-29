@@ -1,6 +1,6 @@
 # Cyberd
 
-![alt text](images/logo.png?raw=true "Logo Cyberd")
+![alt text](images/cyberd/logo.png?raw=true "Logo Cyberd")
 
 
 En este repositorio puedes encontrar algunos scripts para gestionar el nodo de [Cyberd](https://github.com/cybercongress/cyberd/blob/master/docs/cyberd.md) .

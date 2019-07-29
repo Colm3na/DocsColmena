@@ -9,13 +9,13 @@
 ## Paso 1:
 
 Añadimos la unidad en nuestro sistema. Si usamos KVM Libvirt abrimos nuestro Virt-Manager, arrancamos nuestra máquina virtual, pulsamos añadir hardware (*add hardware*): 
-![alt text](images/addhardware.jpg?raw=true "Añadir hardware a la máquina virtual")
+![alt text](images/sistemas/addhardware.jpg?raw=true "Añadir hardware a la máquina virtual")
 
 Elegimos la primera opción, almacenamiento (*storage*), seleccionamos almacenamiento personalizado (*custom storage*):
-![alt text](images/customstorage.jpg?raw=true "Añadir hardware a la máquina virtual")
+![alt text](images/sistemas/customstorage.jpg?raw=true "Añadir hardware a la máquina virtual")
 
 Elegimos nuestro *pool* (directorio) de almacenamiento y creamos un nuevo qcow2 con el tamaño deseado.
-![alt text](images/createpool.jpg?raw=true "Añadir hardware a la máquina virtual")
+![alt text](images/sistemas/createpool.jpg?raw=true "Añadir hardware a la máquina virtual")
 
 ## Paso 2:
 
@@ -88,7 +88,7 @@ vdc                     254:32   0   100G  0 disk
   PV UUID               3rIpft-Hu1d-0Tl0-niKA-vPWW-OrY9-QxJBBw
 </pre>
 
->Tenemos un dispositivo físico con nombre /dev/vda5 que pertenece al grupo de volumenes "dappnode-vg".
+>Tenemos un dispositivo físico con nombre `/dev/vda5` que pertenece al grupo de volumenes "dappnode-vg".
 
 - Vamos a añadir un nuevo dispositivo físico para después añadirlo al grupo de volumenes:
 
