@@ -123,13 +123,16 @@ Se le pedirá que introduzca una frase de contraseña que se utiliza para cifrar
 
     > Ej:
     `./balance`
---- 
+
+---
 
 ## Validador
 
-### configuración para el validador _(puedes encontrar estos tips en la [documentacion](https://cosmos.network/docs/validators/validator-setup.html#validator-setup) de Cosmos y el cliente [Gaia](https://cosmos.network/docs/gaia/gaiacli.html#gaia-cli))_:
+---
 
-### Comandos:
+#### Configuración para el validador _(puedes encontrar estos tips en la [documentación](https://cosmos.network/docs/validators/validator-setup.html#validator-setup) de Cosmos y el cliente [Gaia](https://cosmos.network/docs/gaia/gaiacli.html#gaia-cli))_:
+
+#### Comandos:
 * **Inicio de un nuevo nodo:**
 ```
 gaiad init --moniker <your_custom_moniker>
@@ -155,7 +158,7 @@ gaiacli status
 gaiad gentx --amount 10000STAKE --commission-rate "0.10" --commission-max-rate "1.00" --commission-max-change-rate "0.01" --pubkey $(gaiad tendermint show-validator) --name $(gaiacli keys list | awk 'FNR==2{print $1}')
 ```
 
-# Configuración del validador _(recuerda modificar los valores)_:
+#### Configuración del validador _(recuerda modificar los valores)_:
 * **Crear validador:**
 ```
 gaiacli tx stake create-validator --amount=5STAKE --pubkey=$(gaiad tendermint show-validator) --moniker="choose a moniker" --chain-id=<chain_id> --from=<key_name> --commission-rate="0.10" --commission-max-rate="0.20" --commission-max-change-rate="0.01"
@@ -286,7 +289,7 @@ gaiacli query stake redelegations-from <account_cosmosval>
 gaiacli query stake parameters
 ```
 
-# Governanza:
+#### Gobernanza:
 * **Crear una propuesta de gobernanza:**
 ```
 gaiacli tx gov submit-proposal --title=<title> --description=<description> --type=<Text/ParameterChange/SoftwareUpgrade> --deposit=<40STAKE> --from=<name> --chain-id=<chain_id>
@@ -337,7 +340,7 @@ gaiacli query gov votes --proposal-id=<proposal_id>
 gaiacli query gov tally --proposal-id=<proposal_id>
 ```
 
-# Variables usadas:
+#### Variables usadas:
 * **Id de la rama:**
 ```
 curl -s http://localhost:26657/status | jq -r '.result.node_info.network'
@@ -372,3 +375,393 @@ gaiacli query gov proposals --trust-node=true | tail -n 1 | cut -d'-' -f1
 ssh -i ~/.ssh/user_rsa -L 26657:localhost:26657 user@[ IP ]
 ```
 
+---
+
+## Testnets.
+
+---
+
+#### Instalación de un nodo en `Gaia-13004`.
+
+
+<p>· <a href="https://github.com/cosmos/gaia">Este</a> es el repositorio de Cosmos para Gaia.</p>
+
+<p>· <a href="https://github.com/cosmos/testnets">Este</a> es el repositorio de Cosmos para testnets.</p>
+
+#### Instalamos prerequisitos _(`jq` no es esencial pero lo usaremos alguna vez)_:
+
+```
+sudo apt install -y make wget curl git gcc jq build-essential software-properties-common 
+```
+
+
+#### Instalamos la última versión de [GO](https://golang.org/dl/)
+
+<pre>
+wget -c 'https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz' -O go1.12.7.linux-amd64.tar.gz
+
+sudo tar -C /usr/local -xzf go1.12.7.linux-amd64.tar.gz
+
+sudo rm -Rf go1.12.7.linux-amd64.tar.gz
+</pre>
+
+#### Añadimos Go a nuestro [PATH](https://es.wikipedia.org/wiki/PATH_(informática)).
+
+>::Abrimos el archivo para añadirle algunas líneas con vim __(en mi caso uso vim, podemos cambiarlo por nano u otro editor)__, **recuerda modificar `<USER>` por tu usuario**::
+
+`vim /home/<USER>/.profile`
+
+>::Añadimos al final del archivo las siguientes líneas::
+
+<pre>
+export PATH="$PATH:/usr/local/go/bin"
+
+export GOPATH="$HOME/go"
+
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+export GOBIN="$GOPATH/bin"
+</pre>
+
+>::Recargamos nuestra terminal::
+
+`source /home/$USER/.profile`
+
+>::Comprobamos la version de Go::
+
+<pre>
+> go version
+
+go version go1.12.7 linux/amd64
+</pre>
+
+#### Clonamos el repositorio de [gaia](https://github.com/cosmos/gaia):
+
+`git clone https://github.com/cosmos/gaia.git`
+
+>::Entramos en la carpeta de gaia y nos aseguramos de estar en la versión correcta, _(en el momento la última versión es `v1.0.0-rc1`)_ **comprobar [aqui](https://github.com/cosmos/gaia/releases) la última versión**::
+
+<pre>
+cd gaia/
+
+git checkout v1.0.0-rc1
+</pre>
+
+>::Instalamos::
+
+`make install`
+
+>::Comprobamos nuestra versión de gaiad y gaiacli::
+
+<pre
+> gaiad version --long
+
+name: gaia
+servername: gaiad
+clientname: gaiacli
+version: 1.0.0-rc1
+gitcommit: fd2691818f4fbb5b03b79481ae8e2f07d9a7d0b0
+buildtags: netgo,ledger
+goversion: go version go1.12.7 linux/amd64
+</pre>
+
+<br>
+
+<pre>
+> gaiacli version --long
+
+name: gaia
+servername: gaiad
+clientname: gaiacli
+version: 1.0.0-rc1
+gitcommit: fd2691818f4fbb5b03b79481ae8e2f07d9a7d0b0
+buildtags: netgo,ledger
+goversion: go version go1.12.7 linux/amd64
+</pre>
+
+#### Creamos los primeros archivos de configuración, el nombre que pongamos será el nombre del nodo _(recuerda modificar los valores que estan señalados con `< >`)_
+
+`gaiad init <NOMBRE>`
+
+>::Comprobamos que nos ha creado la carpeta `.gaiad/`, dentro de la misma podemos encontrar `config/`_(contiene los archivos de configuración)_ y `data/`_(contiene la información de la blockchain, asi como la base de datos para su sincronización con otro nodo)_::
+
+>::Eliminamos el genesis creado y nos descargamos el de Cosmos, _(comprobar [aquí](https://github.com/cosmos/testnets/tree/master/gaia-13k) la version del genesis)_
+
+`cd .gaiad/config/`
+
+`rm genesis.json`
+
+`wget https://raw.githubusercontent.com/cosmos/testnets/master/gaia-13k/genesis.json`
+
+>::Comprobamos el shasum del genesis descargado _(comprobar con el del [repositorio oficial](https://github.com/cosmos/testnets#july-22-2019-2120-gmt--gaia-13004))_::
+
+
+`shasum -a 256 genesis.json`
+
+>::Debería ser::
+
+```
+a22d5d16ec2666b0a8cca9bd374fe26c1c0f2f52b1dc1ccf6e0cb8c93eefc771  genesis.json
+```
+
+#### Añadimos los seeds, podemos encontrarlos en el [repositorio de gaia](https://github.com/cosmos/testnets#july-22-2019-2120-gmt--gaia-13004)
+
+>::Seeds::
+
+`35b9658ca14dd4908b37f327870cbd5007ee06f1@116.203.146.149:26656`
+
+`c24f496b951148697f8a24fd749786075c128f00@35.203.176.214:26656`
+
+`6be0856f6365559fdc2e9e97a07d609f754632b0@cosmos-gaia-13004-seed.nodes.polychainlabs.com:26656`
+
+
+>::Peers de [Colmena](https://www.coworkingcolmena.com), [DelegaNetworks](https://delega.io) y [DragonStake](https://dragonstake.io/#/) para la testnet::
+
+`06b158b29797610476e621f28867cbae926fd1d3@163.172.129.132:26656`
+
+`3d354e7383afa29b5bf9741fa4b9831403e880c5@51.15.127.68:26656`
+
+#### Comprobamos el ID de nuestro nodo, podemos compartirlo en un futuro para conectarnos con otros nodos:
+
+`gaiad tendermint show-node-id`
+
+#### Iniciamos el nodo:
+
+`gaiad start`
+
+#### Añadir gaiad como un servicio de sistema:
+
+>::Entramos en la carpeta::
+
+`cd /etc/systemd/system/`
+
+>::Creamos un archivo llamado `gaiad.service`::
+
+`sudo vim gaiad.service`
+
+>::Dentro copiamos lo siguiente, **recordad cambiar `USER` por vuestro usuario**::
+
+<pre>
+[Unit]
+Description=Cosmos Gaia Node
+After=network.target
+
+[Service]
+Type=simple
+User=USER
+WorkingDirectory=/home/USER
+ExecStart=/home/USER/go/bin/gaiad start
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+</pre>
+
+>**Paramos `gaiad` si lo tenemos funcionando antes de seguir!!**
+
+>::Activamos el servicio y lo iniciamos::
+
+`sudo systemctl enable gaiad.service `
+
+`sudo systemctl start gaiad.service`
+
+>::Para comprobar que el servicio está funcionando y ver el estado creamos un script::
+
+`vim chechGaiad`
+
+>::Copiamos lo siguiente, guardamos y salimos::
+
+<pre>
+#!/bin/bash
+#
+#
+sudo journalctl -f -u gaiad.service
+</pre>
+
+>::Damos permisos de ejecución:
+
+`chmod +x checkgaiad`
+
+>::Ejecutamos el script para ver la información del nodo::
+
+`./checgaiad`
+
+>_Aunque nosotros paremos el script, el servicio de gaia seguirá funcionando, y en caso de reiniciarse la máquina el servicio de gaia se iniciará con el sistema_
+
+#### Aquí se describen los pasos necesarios para actualizar el nodo de Cosmos en la Testnet `Gaia-13003` a `Gaia-13004` 
+
+- [Este](https://github.com/cosmos/gaia) es el repositorio de Cosmos para gaia y [este](https://github.com/cosmos/cosmos-sdk/) 
+el repositorio para el sdk de Cosmos.
+
+<sumary>
+  <h2 align="center">Necesitamos la última version de <a href="https://golang.org/dl/"> Go</a> instalada, <i>en caso de tener Go podemos saltar este paso:</i></h2>
+
+</sumary>
+<details>
+
+```
+wget -c 'https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz' -O go1.12.7.linux-amd64.tar.gz
+
+sudo tar -C /usr/local -xzf go1.12.7.linux-amd64.tar.gz
+
+sudo rm -Rf go1.12.7.linux-amd64.tar.gz
+```
+
+```
+cat <<EOT >> ~/.profile
+#Go:
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+export GOBIN="$GOPATH/bin"
+EOT 
+```
+
+>::Recargamos nuestra terminal::
+
+`source /home/$USER/.profile `
+
+</details>
+
+<sumary>
+  <h2 align="center">Actualizamos Cosmos-sdk a la versión v0.34.7 <i>(mínimo necesitamos la versión 0.34.6)</i>:</h2>
+
+</sumary>
+<details>
+
+```
+cd $GOPATH/src/github.com/cosmos/cosmos-sdk/
+
+git checkout v0.34.7
+
+make install
+```
+
+>Comprobamos la versión de gaia y gaiacli
+
+```
+>gaiad version --long
+cosmos-sdk: 0.34.7
+git commit: f783cb71e7fe976bc01273ad652529650142139b
+vendor hash: f60176672270c09455c01e9d880079ba36130df4f5cd89df58b6701f50b13aad
+build tags: netgo ledger
+go version go1.12.7 linux/amd64
+```
+
+```
+>gaiacli version --long
+cosmos-sdk: 0.34.7
+git commit: f783cb71e7fe976bc01273ad652529650142139b
+vendor hash: f60176672270c09455c01e9d880079ba36130df4f5cd89df58b6701f50b13aad
+build tags: netgo ledger
+go version go1.12.7 linux/amd64
+```
+</details>
+
+<sumary>
+  <h2 align="center"> Clonamos el repositorio de 
+    <a href="https://github.com/cosmos/gaia.git">gaia</a>, 
+      <i>usamos la rama <a href="https://github.com/cosmos/gaia/releases/tag/v1.0.0-rc1">1.0.0-rc1</a></i> e instalamos:
+  </h2>
+</sumary>
+<details>
+
+
+```
+git clone https://github.com/cosmos/gaia.git && cd gaia/ 
+
+git checkout v1.0.0-rc1
+
+make install
+```
+
+>::Comprobamos la version de gaiad y gaiacli::
+
+```
+>gaiad version --long
+name: gaia
+servername: gaiad
+clientname: gaiacli
+version: 1.0.0-rc1
+gitcommit: fd2691818f4fbb5b03b79481ae8e2f07d9a7d0b0
+buildtags: netgo,ledger
+goversion: go version go1.12.7 linux/amd64
+```
+
+```
+gaiacli version --long
+name: gaia
+servername: gaiad
+clientname: gaiacli
+version: 1.0.0-rc1
+gitcommit: fd2691818f4fbb5b03b79481ae8e2f07d9a7d0b0
+buildtags: netgo,ledger
+goversion: go version go1.12.7 linux/amd64
+```
+</details>
+
+<sumary>
+  <h2 align="center"> Descargamos el <a href="https://raw.githubusercontent.com/cosmos/testnets/master/gaia-13k/genesis.json"> genesis </a> correcto, hacemos un reset  e iniciamos el nodo:</h2>
+</sumary>
+<details>
+
+```
+cd .gaiad/config/
+
+rm -r genesis.json
+
+wget https://raw.githubusercontent.com/cosmos/testnets/master/gaia-13k/genesis.json
+```
+
+>::Comprobamos el shasum del genesis descargado, lo podemos encontrar en el <a href="https://github.com/cosmos/testnets#july-22-2019-2120-gmt--gaia-13004">repo de testnets</a>::
+
+```
+shasum -a 256 genesis.json
+```
+
+>::Debería ser::
+
+```
+a22d5d16ec2666b0a8cca9bd374fe26c1c0f2f52b1dc1ccf6e0cb8c93eefc771  -
+```
+
+- Podemos encontrar seeds en el <a href="https://github.com/cosmos/testnets">repo de testnets</a> de Cosmos.
+
+```
+35b9658ca14dd4908b37f327870cbd5007ee06f1@116.203.146.149:26656,
+c24f496b951148697f8a24fd749786075c128f00@35.203.176.214:26656,
+6be0856f6365559fdc2e9e97a07d609f754632b0@cosmos-gaia-13004-seed.nodes.polychainlabs.com:26656,
+```
+
+- Los __persistent peers__ de la <a href="https://www.coworkingcolmena.com">Colmena</a>,<a href="https://delega.io"> Delega Networks</a>, <a href="https://dragonstake.io/#/">Dragon Stake</a> y Bitcoinera son:
+
+```
+06b158b29797610476e621f28867cbae926fd1d3@163.172.129.132:26656,
+
+3d354e7383afa29b5bf9741fa4b9831403e880c5@51.15.127.68:26656,
+
+ba9a7177dcd9be0ee1ec244f117578087a521e24@116.203.118.88:26656,
+```
+
+>::Iniciamos el nodo::
+
+```
+gaiad start
+```
+</details>
+
+<br>
+
+---
+
+- Recuerda que toda la información sobre actualizaciones y más las puedes encontrar en su canal de [RIOT](https://riot.im/app/#/room/#cosmos_validators_technical_updates:matrix.org). 
+
+- [Este](https://matrix.to/#/!vIMgGaMqkLIWPCZvPF:matrix.org?via=matrix.org&via=kde.org&via=ru-matrix.org) es el RIOT de Cosmos.
+
+- [Este](https://t.me/cosmosproject) es su canal de Telegram.
+
+- [Este](https://t.me/Cosmos_Network_ES) es el canal de Telegram en Español.
+
+---

@@ -9,3 +9,5 @@ Documentación sobre los proyectos realizados en la Colmena.
 - [Aquí](cyberd.md) puedes encontrar la documentación de Cyberd.
 
 - [Aquí](cosmos.md) puedes encontrar la documentación para Cosmos.
+
+- [Aquí](polkadot.md) puedes encontrar la documentación para Polkadot.
