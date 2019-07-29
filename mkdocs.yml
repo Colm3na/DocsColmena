@@ -1,6 +1,5 @@
 site_name: Docs Colmena
 theme:
   name: 'rtd-dropdown'
-site_url: https://www.coworkingcolmena.com/docs 
 repo_url: https://github.com/Colm3na/DocsColmena
 
