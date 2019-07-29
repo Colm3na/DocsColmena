@@ -1,2 +1,3 @@
-# DocsColmenaLabs
-Repositorio para la documentación de los diferentes proyectos de la Colmena
+# Documentación Colmena
+
+Repositorio para la documentación de los diferentes proyectos de la Colmena.
