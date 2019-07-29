@@ -1,5 +1,7 @@
 # Kava
 
+- [Repositorio oficial](https://github.com/Kava-Labs/kava)
+
 ### configuración para el validador _(puedes encontrar estos tips en la [documentacion](https://kava.network/docs/validators/validator-setup.html#validator-setup) de kava y el cliente [Kvcli](https://kava.network/docs/gaia/kvcli.html#gaia-cli))_:
 
 #### Comandos para `kava-testnet-1.1`:

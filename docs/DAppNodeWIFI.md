@@ -1,5 +1,7 @@
 # DAppNode-WIFI
 
+- [Repositorio oficial](https://github.com/dappnode/DAppNode)
+
 En este repositorio están los pasos necesarios para usar el wifi del [DAppNode](https://github.com/dappnode/DAppNode) de la [Colm3na](https://www.coworkingcolmena.com) como nodo.
 
 El primer paso es conectarse al wifi del DAppNode, su `SSID` es `DAppNodeColm3na` para saber la contraseña pásate por la Colmena :honeybee: .
