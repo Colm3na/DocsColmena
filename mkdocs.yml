@@ -11,7 +11,8 @@ nav:
     - Inicio: DAppNodeCosmos.md
     - DappNode+WIFI: DAppNodeWIFI.md
   - Bitcoin:
-    - Inicio: lightning-network/README.md
+    - Inicio: lightning-index.md
+    - Meetup: lightning-network/README.md
     - Bitcoin: lightning-network/1.0_Bitcoin.md
     - SegWit: lightning-network/1.1_SegWit.md
     - Lightning Network: lightning-network/2_LightningNetwork.md
@@ -26,6 +27,7 @@ nav:
     - Inicio: kava.md
   - Sistemas:
     - Inicio: sistemas.md
+    - MkDocs: instalacionDoc.md
 #Configuración del tema: 
 theme:
   name: 'rtd-dropdown'
