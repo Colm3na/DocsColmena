@@ -1,22 +1,53 @@
-site_name: Docs Colmena
+#Información del sitio:
+site_name: Wiki Colmena
+site_description: Documentación de los proyectos de la Colmena
+site_author: 'ColmenaLabs_svq'
+site_url: https://github.com/Colm3na/DocsColmena
+#Navegación:
+nav:
+  - Home: index.md
+  - Cosmos: cosmos.md
+  - DAppNode: 
+    - Inicio: DAppNodeCosmos.md
+    - DappNode+WIFI: DAppNodeWIFI.md
+  - Bitcoin:
+    - Inicio: lightning-network/README.md
+    - Bitcoin: lightning-network/1.0_Bitcoin.md
+    - SegWit: lightning-network/1.1_SegWit.md
+    - LightningNetwork1: lightning-index.md
+    - LightningNetwork2: lightning-network/2_LightningNetwork.md
+    - Participación: lightning-network/3_Participación.md
+    - Aplicación: lightning-network/4_Aplicación.md
+    - Enlaces de interés: lightning-network/5_Resources.md
+    - Comandos para el despliegue: lightning-network/6_Comandos_para_desplegar_LND.md 
+    - Instalación nodo LND y primer contacto: lightning-network/7_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md 
+  - Polkadot: 
+    - Inicio: polkadot.md
+  - Cyberd: 
+    - Inicio: cyberd.md
+  - Kava: 
+    - Inicio: kava.md
+  - Sistemas:
+    - Inicio: sistemas.md
+#Configuración del tema: 
 theme:
   name: 'rtd-dropdown'
-<<<<<<< HEAD
-repo_url: https://github.com/Colm3na/DocsColmena
-
-=======
-pages:
-  - index.md
-  - cosmos.md
-  - cyberd.md
-  - DAppNodeCosmos.md
-  - DAppNodeWIFI.md
-  - kava.md
-  - lightning-index.md
-  - polkadot.md
-  - sistemas.md
+  language: 'es'
+  feature:
+    tabs: false
+#Repositorio original.
+#Necesario para renderizar el enlace en la superior derecha.
+repo_name: 'Colm3na/DocsColmena'
+repo_url: 'https://github.com/Colm3na/DocsColmena'
+#Enlaces de las redes.
 extra:
   social:
     - type: 'github'
+      size: 'lg'
       link: 'https://github.com/Colm3na'
->>>>>>> master
+    - type: 'twitter'
+      size: 'lg'
+      link: 'https://twitter.com/CoworkLaColmena'
+    - type: 'medium'
+      size: 'lg'
+      link: 'https://medium.com/colmenasvq'

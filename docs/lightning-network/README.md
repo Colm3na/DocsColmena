@@ -14,7 +14,7 @@ En este MeetUp orientado a __PoS__, vamos a hablar de cómo afecta a __Bitcoin__
 
 ![Lightning Network](../images/lightning-network/LOGO_LN.png "Lightning Network")
 
-### Con esto, esperamos explicar:
-##### 1. La _rama_ que representa __Bitcoin__ en el mundo de la blockchain,
-##### 2. Veremos el funcionamiento del __PoS__ en el concepto de BTC,
-##### 3. Discutiremos sobre el concepto de ___apilar___ pruebas de consenso entre capas.
+## Con esto, esperamos explicar:
+ 1. La _rama_ que representa __Bitcoin__ en el mundo de la blockchain,
+ 2. Veremos el funcionamiento del __PoS__ en el concepto de BTC,
+ 3. Discutiremos sobre el concepto de ___apilar___ pruebas de consenso entre capas.
