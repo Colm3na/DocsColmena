@@ -1,5 +1,22 @@
 site_name: Docs Colmena
 theme:
   name: 'rtd-dropdown'
+<<<<<<< HEAD
 repo_url: https://github.com/Colm3na/DocsColmena
 
+=======
+pages:
+  - index.md
+  - cosmos.md
+  - cyberd.md
+  - DAppNodeCosmos.md
+  - DAppNodeWIFI.md
+  - kava.md
+  - lightning-index.md
+  - polkadot.md
+  - sistemas.md
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/Colm3na'
+>>>>>>> master
