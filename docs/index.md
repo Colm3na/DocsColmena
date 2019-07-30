@@ -13,3 +13,5 @@ Documentación sobre los proyectos realizados en la Colmena.
 - [Aquí](polkadot.md) puedes encontrar la documentación para Polkadot.
 
 - [Aquí](lightning-index.md) puedes encontrar la documentación para la Lightning Network.
+
+- [Aquí](instalacionDoc.md) tienes los pasos para ver la documentación en tu ordenador.
