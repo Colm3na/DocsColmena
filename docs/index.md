@@ -11,3 +11,5 @@ Documentación sobre los proyectos realizados en la Colmena.
 - [Aquí](cosmos.md) puedes encontrar la documentación para Cosmos.
 
 - [Aquí](polkadot.md) puedes encontrar la documentación para Polkadot.
+
+- [Aquí](lightning-network.md) puedes encontrar la documentación para la Lightning Network.
