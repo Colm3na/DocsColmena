@@ -6,6 +6,7 @@ site_url: https://github.com/Colm3na/DocsColmena
 #Navegación:
 nav:
   - Home: index.md
+  - Instalación wiki: instalacionDoc.md
   - Cosmos: cosmos.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
