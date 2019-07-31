@@ -12,16 +12,15 @@ nav:
     - Inicio: DAppNodeCosmos.md
     - DappNode+WIFI: DAppNodeWIFI.md
   - Bitcoin:
-    - Inicio: lightning-network/README.md
+    - Inicio: lightning-index.md
+    - Meetup: lightning-network/README.md
     - Bitcoin: lightning-network/1.0_Bitcoin.md
     - SegWit: lightning-network/1.1_SegWit.md
-    - LightningNetwork1: lightning-index.md
-    - LightningNetwork2: lightning-network/2_LightningNetwork.md
-    - Participación: lightning-network/3_Participación.md
-    - Aplicación: lightning-network/4_Aplicación.md
-    - Enlaces de interés: lightning-network/5_Resources.md
-    - Comandos para el despliegue: lightning-network/6_Comandos_para_desplegar_LND.md 
-    - Instalación nodo LND y primer contacto: lightning-network/7_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md 
+    - LightningNetwork: lightning-network/2_LightningNetwork.md
+    - Sidechains de Bitcoin: lightning-network/3_Sidechains_de_Bitcoin.md
+    - Enlaces de interés: lightning-network/4_Resources.md
+    - Comandos para el despliegue: lightning-network/5_Comandos_para_desplegar_LND.md
+    - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
   - Polkadot: 
     - Inicio: polkadot.md
   - Cyberd: 
