@@ -166,7 +166,7 @@ En la blockchain el proceso de la “minería” es la validación de las transa
 Los mineros desempeñan el papel de los cajeros bancarios, comprueban que las firmas y números de cuentas están correctos, asegurando la identidad y las pruebas de la existencia de los fondos para realizar la transacción. 
 Estas firmas digitales operan mediante el uso de las funciones “hash“: ecuaciones matemáticas que toman cualquier entrada dada y crean una salida única para esa entrada en particular.
 
-### Mecanismos de elección de bloques
+#### Mecanismos de elección de bloques
 
 Proof of Work:
 Una propiedad importante de un bloque en Ethereum, Bitcoin y muchas otras criptomonedas debe ser menor que algún valor objetivo. La razón por la cual esto es necesario, es que, en un sistema descentralizado, cualquiera puede producir bloques, por tanto, para evitar que la red se llene de bloques, y para proporcionar una forma de medir cuánto consenso hay detrás de una versión particular de la cadena de bloques, de alguna manera debe ser difícil producir un bloque. Debido a que los hashes son pseudoaleatorios, encontrar un bloque cuyo hash es menor que `0000000100000000000000000000000000000000000000000000000000000000` requiere un promedio de 4.3 mil millones de intentos. En todos estos sistemas, el valor objetivo se autoajusta de modo que, en promedio, un nodo en la red, encuentra un bloque cada N minutos (por ejemplo, N=10 en Bitcoin y 1 para Ethereum).
@@ -175,10 +175,49 @@ Una propiedad importante de un bloque en Ethereum, Bitcoin y muchas otras cripto
 
 El algoritmo de prueba de trabajo (PoW) utilizado en Ethereum se llama [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) (una versión modificada del algoritmo [_Dagger-Hashimoto_](https://github.com/ethereum/wiki/wiki/Dagger-Hashimoto)) y consiste en encontrar una entrada de nonce al algoritmo para que el resultado esté por debajo de un cierto umbral de dificultad. El punto en los algoritmos PoW es que no hay mejor estrategia para encontrar tal cosa que enumerar las posibilidades, mientras que la verificación de una solución es trivial y barata. Dado que las salidas tienen una distribución uniforme (ya que son el resultado de la aplicación de una función de hash), podemos garantizar que, en promedio, el tiempo que se necesita para encontrar tal valor depende del umbral de dificultad. Esto permite controlar el tiempo de búsqueda de un nuevo bloque simplemente manipulando la dificultad.
 
-Ethash PoW (Ethereum) es resistente a ASIC. Se logra con un algoritmo de prueba de trabajo que requiere la selección de subconjuntos de un recurso fijo que depende del encabezado del bloque y del nonce. Este recurso (unos pocos datos de tamaño de gigabytes) se llama [DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG). La DAG es totalmente diferente cada 30000 bloques, una ventana de 125 horas llamada época (aproximadamente 5.2 días) y toma un tiempo para generarse. Dado que el DAG sólo depende de la altura del bloque, puede ser pre-generado, pero si no es así, el cliente necesita esperar hasta el final de este proceso para producir un bloque. Si los clientes no generan y almacenan en caché los DAG con antelación, la red puede sufrir un retraso masivo de bloques en cada transición de época. Tenga en cuenta que no es necesario generar el DAG para verificar el PoW, lo que esencialmente permite la verificación con una CPU baja y una memoria pequeña.
+Ethash PoW (el que usa _Ethereum_) es resistente a ASIC. Se logra con un algoritmo de prueba de trabajo que requiere la selección de subconjuntos de un recurso fijo que depende del encabezado del bloque y del nonce. Este recurso (unos pocos datos de tamaño de gigabytes) se llama [DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG). La DAG es totalmente diferente cada 30000 bloques, una ventana de 125 horas llamada época (aproximadamente 5.2 días) y toma un tiempo para generarse. Dado que el DAG sólo depende de la altura del bloque, puede ser pre-generado, pero si no es así, el cliente necesita esperar hasta el final de este proceso para producir un bloque. Si los clientes no generan y almacenan en caché los DAG con antelación, la red puede sufrir un retraso masivo de bloques en cada transición de época. Tenga en cuenta que no es necesario generar el DAG para verificar el PoW, lo que esencialmente permite la verificación con una CPU baja y una memoria pequeña.
 
 Cada vez que un minero resuelve esta ‘prueba de trabajo’, transmitirá el bloque a toda la red. El resto de mineros deberán comprobar que, tanto las operaciones incluidas en el bloque como la firma digital son válidas. Si la gran mayoría lo aprueba, el bloque se añadirá a la cadena de bloques de forma inmutable.
 
 Para evitar que los bloques se completen demasiado rápido o demasiado lento, el protocolo se reajusta después de añadir cada bloque para hacer más fácil o más difícil de adivinar el valor Nonce.
 
-* **Tipos de hardware para minería**
+**Tipos de hardware para minería**
+
+- Los chips **ASICs** _(Application-Specific Integrated Circuit)_ o también llamados Circuitos Integrados de Aplicación Específica, son chips cuya función es realizar una tarea concreta y particular. Estas máquinas son las más extendidas en la minería de Bitcoin.
+
+- Las **CPUs** _(Central Processor Unit)_ o Unidad Central de procesamiento es lo que conocemos como el procesador de un ordenador. De las tres opciones, esta es la menos potente y prácticamente no se utiliza para la minería
+
+- Las **GPUs** _(Graphic Processor Unit)_ o Unidad Gráfica de procesamiento es lo que conocemos como la tarjeta gráfica de un ordenador. Éstas tienen un ‘hash rate’ o potencia minera más alta que las CPUs, lo que significa que pueden resolver los problemas matemáticos más rápido.
+
+**Un resumen de los mineros sería:**
+1. Reciben las solicitudes de transacción
+2. Verifican que éstas se pueden llevar a cabo
+3. Almacenan las transacciones válidas en un bloque
+4. Compiten realizando cálculos para encontrar el valor Nonce
+5. El que lo consigue, propaga su bloque al resto de los mineros
+6. Si la mayoría lo da por válido, éste se añade a la cadena de bloques
+7. El minero ganador recibe la recompensa del bloque
+
+## Proof of Stake
+
+**Prueba de participación** _(PoS)_ es una categoría de algoritmos de consenso para blockchains públicas que dependen del interés económico de un validador en la red. En las blockchains públicas basadas en prueba de trabajo _(PoW)_  _(por ejemplo, Bitcoin y la implementación actual de Ethereum)_, el algoritmo recompensa a los participantes que resuelven encriptaciones criptográficas para validar transacciones y crear nuevos bloques _(es decir, minería)_. En las blockchains públicas basadas en PoS _(por ejemplo, la próxima implementación de Casper de Ethereum, Polkadot, Cosmos)_, un grupo de validadores se turnan para proponer y votar el siguiente bloque, y el peso del voto de cada validador _(es decir, la validación)_ depende del tamaño de su depósito. Las ventajas significativas de PoS incluyen seguridad, menor riesgo de centralización y eficiencia energética.
+
+La cadena de bloques realiza un seguimiento de un conjunto de validadores, y cualquiera que tenga la criptomoneda base de la cadena de bloques (en el caso de Ethereum, el Ether "Ξ") puede convertirse en un validador al enviar un tipo especial de transacción que bloquea su Ether en un depósito. El proceso de crear y aceptar nuevos bloques se realiza a través de un algoritmo de consenso en el que pueden participar todos los validadores actuales.
+
+Hay muchos tipos de algoritmos de consenso y muchas formas de asignar recompensas a los validadores que participan en el algoritmo de consenso, por lo que hay muchos _"sabores"_ de prueba de participación. Desde una perspectiva algorítmica, hay dos tipos principales: **prueba de participación basada en la blockchain** y **prueba de participación al estilo [BFT.](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance)**
+
+En la **prueba de participación basada en blockchain**, el algoritmo selecciona pseudoaleatoriamente un validador durante cada intervalo de tiempo (por ejemplo, cada período de 10 segundos puede ser un intervalo de tiempo) y asigna ese validador al derecho de crear un solo bloque, y este bloque debe apuntar a un bloque anterior _(normalmente el bloque al final de la cadena que anteriormente era más larga)_, y con el tiempo la mayoría de los bloques convergen en una sola cadena en constante crecimiento.
+
+En la **prueba de participación al estilo BFT**, a los validadores se les asigna _aleatoriamente_ el derecho de proponer bloques, pero acordar qué bloque es canónico se realiza a través de un proceso de múltiples rondas donde cada validador envía un "voto" para un bloque específico durante cada ronda, y al final del proceso, todos los validadores _(honestos y en línea)_ acuerdan permanentemente si un bloque determinado es parte de la cadena o no. Tenga en cuenta que los bloques aún pueden estar encadenados juntos; la diferencia clave es que el consenso en un bloque puede venir dentro de un bloque, y no depende de la longitud o el tamaño de la cadena después de él.
+
+**Principales beneficios del PoS frente al PoW:**
+
+· No es necesario consumir grandes cantidades de electricidad para asegurar una cadena de bloques (por ejemplo, se estima que tanto Bitcoin como Ethereum queman más de $ 1 millón en costos de electricidad y hardware por día como parte de su mecanismo de consenso).
+
+· Debido a la falta de alto consumo de electricidad, no hay la necesidad de emitir tantas monedas nuevas para motivar a los participantes a seguir participando en la red. En teoría, incluso es posible tener una emisión neta negativa, en la que una parte de las tarifas de transacción se "quema" y, por lo tanto, el suministro disminuye con el tiempo.
+
+· La prueba de participación abre la puerta a una gama más amplia de técnicas que utilizan el diseño de mecanismos teóricos de juegos para desalentar mejor a los grupos centralizados de formarse y, si se forman, actuar de maneras que son perjudiciales para la red (por ejemplo, interesados en la minería en prueba de trabajo).
+
+· Reducción de los riesgos de centralización, ya que las economías de escala son mucho menos problemáticas. $ 10 millones de monedas le darán ganancias exactamente 10 veces más altas que $ 1 millón de monedas, sin ganancias adicionales desproporcionadas, porque en el nivel más alto puede permitirse un mejor equipo de producción en masa.
+
+· La capacidad de utilizar sanciones económicas para hacer que varias formas de ataques del 51% sean mucho más costosas que la prueba de trabajo, parafraseando a Vlad Zamfir, "es como si tu granja de ASIC se hubiera quemado si participas en un ataque del 51%"
