@@ -32,7 +32,7 @@ nav:
     - Inicio: sistemas.md
 #Configuración del tema: 
 theme:
-  name: 'material'
+  name: 'rtd-dropdown'
   feature:
     tabs: false
 #Repositorio original.
