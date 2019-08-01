@@ -1,9 +1,9 @@
-# ¿Qué Ethereum?
+# ¿Qué es la tecnología blockchain?
 
 Antes de explicar qué es [Ethereum](https://es.wikipedia.org/wiki/Ethereum), vamos a explicar qué es la [blockchain](https://es.wikipedia.org/wiki/Cadena_de_bloques) y algunas características e información básica sobre ellas.
 
 ## ¿Qué es la blockchain?
-Es un libro de contabilidad distribuido que garantiza la seguridad y la facilidad de uso, permitiendo a todos conectarse directamente sin necesidad de un tercero. _Pero aclaremos esto un poco mejor._
+Es un **libro de contabilidad distribuido** que **garantiza la seguridad** y la **facilidad de uso**, permitiendo a todos conectarse directamente **sin necesidad de un tercero**. _Pero aclaremos esto un poco mejor._
 
 * **Libro de contabilidad:**
 _Como_ una [base de datos](https://es.wikipedia.org/wiki/Base_de_datos), un lugar donde se escriben cosas que pueden ser, letras, números y código de programación.
@@ -31,9 +31,13 @@ La red puede verificar que una transacción fue enviada por la persona que posee
 * **Privacidad y transparencia:**
 La blockchain proporciona verificabilidad pública de su estado general sin filtrar información sobre el estado de cada participante.
 
+---
+
 ::Según Vitalik Buterin, creador de Ethereum::
 
 _“Las cadenas de bloques están políticamente descentralizadas (no hay nadie que las controle) y arquitectónicamente descentralizadas (no hay punto central de fallo de infraestructura) pero están lógicamente centralizadas (hay un estado comúnmente acordado y el sistema se comporta como una sola computadora)”_
+
+---
 
 ### Tipos de blockchains
 
