@@ -18,4 +18,3 @@ Si tenéis Windows os podéis descargar LibreOffice aquí:
 - Guía Workshop:
 
 [https://drive.google.com/open?id=1n-BOSgfFfCGPqo66_plWypJnbUfF-9Zd](https://drive.google.com/open?id=1n-BOSgfFfCGPqo66_plWypJnbUfF-9Zd)
-

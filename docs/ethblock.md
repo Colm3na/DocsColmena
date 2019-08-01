@@ -102,29 +102,29 @@ El estándar [ERC-20](https://github.com/ethereum/EIPs/issues/20) es un estánda
 
 **Métodos:**
 
-    · Name(opcional): Nombre del Token.
+· Name(opcional): Nombre del Token.
 
-    · Symbol(opcional): Símbolo del token.
+· Symbol(opcional): Símbolo del token.
     
-    · Decimals(opcional): El número de decimales que utiliza el token.
+· Decimals(opcional): El número de decimales que utiliza el token.
     
-    · TotalSupply: Suministro total de tokens que existirán.
+· TotalSupply: Suministro total de tokens que existirán.
     
-    · BalanceOf: Saldo de la cuenta del propietario.
+· BalanceOf: Saldo de la cuenta del propietario.
     
-    · Transfer: Transferencia a …
+· Transfer: Transferencia a …
     
-    · TransferFrom: Transferencia desde …
+· TransferFrom: Transferencia desde …
     
-    · Approve:  Permite la retirada de fondos.
+· Approve:  Permite la retirada de fondos.
 
-    · Allowance: Devuelve la cantidad que se puede retirar.
+· Allowance: Devuelve la cantidad que se puede retirar.
 
 **Eventos:**
 
-    · Transfer: Activado cuando se transfieren los tokens.
+· Transfer: Activado cuando se transfieren los tokens.
 
-    · Approval: Activado cuando se apruebe la transferencia.
+· Approval: Activado cuando se apruebe la transferencia.
 
 ### Estándar ERC-721
 
