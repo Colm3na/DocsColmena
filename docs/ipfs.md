@@ -1,10 +1,12 @@
 <h1 align="center">IPFS</h1>
 
 <p align="center">
-<img src="images/ipfs/ipfs.png">
+<img src="/images/ipfs/ipfs.png">
 </p>
 
-Sistema de archivos [Inter-Planetario](https://es.wikipedia.org/wiki/Sistema_de_archivos_interplanetarios)
+<p align="center">
+Sistema de archivos  <a href="https://es.wikipedia.org/wiki/Sistema_de_archivos_interplanetarios">Inter-Planetario.</a>
+</p>
 
 <sumary>
 
@@ -29,47 +31,41 @@ Se trata de una red p2p que reutiliza mucho código de Ethereum.
 
 Primero nos aseguramos de que tenemos instalado [Go](https://golang.org):
 
-```
-go version
+`go version`
 
-go version go1.11.5 linux/amd64
-```
+`go version go1.12.7 linux/amd64`
 
 <sumary>
+
+---
 
 :: **Si no lo tenemos instalado, seguimos los siguientes pasos** ::
 </sumary>
 <details>
 
 ```
-wget -c 'https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz' -O go1.11.5.linux-amd64.tar.gz
+wget -c 'https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz' -O 
+
+go1.12.7.linux-amd64.tar.gz
 ```
 
 ```
-sudo tar -C /usr/local -xzf go1.11.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.12.7.linux-amd64.tar.gz
 ```
 
 ```
-sudo rm -Rf go1.11.5.linux-amd64.tar.gz
+sudo rm -Rf go1.12.7.linux-amd64.tar.gz
 ```
 **Añadimos lo siguiente en nuestro `.profile`**
 
-```
-PATH="\$PATH:/usr/local/go/bin"
-GOPATH="\$HOME/go"
-PATH="\$PATH:\$GOROOT/bin:\$GOPATH/bin"
-```
-> Podemos hacerlo directamente copiando lo siguiente en nuestra terminal:
+<pre>
+export PATH="$PATH:/usr/local/go/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+export GOBIN="$GOPATH/bin"
+</pre>
 
-```
-cat <<EOT >> ~/.profile
-#Go:
-PATH="\$PATH:/usr/local/go/bin"
-GOPATH="\$HOME/go"
-PATH="\$PATH:\$GOROOT/bin:\$GOPATH/bin"
-EOT
-```
-> Recargamos nuestro profile con:
+> Recargamos nuestra terminal con:
 
 ```
 source /home/$USER/.profile
@@ -77,10 +73,13 @@ source /home/$USER/.profile
 
 </details>
 
+---
+
 Después, descargamos el [tarball de IPFS](https://dist.ipfs.io/go-ipfs)
 
-> En su web vemos todas las versiones compiladas con `Go` de IPFS.
-> La última versión en estos momentos es la `v0.4.9`
+>En su web vemos todas las versiones compiladas con `Go` de IPFS.
+
+>La última versión en estos momentos es la `v0.4.9`
 
 Descargamos el `tar` con este comando:
 
@@ -103,9 +102,7 @@ sudo ./go-ipfs/install.sh
 > Lo hacemos con sudo porque el instalador tratará de colocar el binario de IPFS
 en una carpeta del sistema que está en nuestro PATH pero que tiene accesos restringidos.
 
-```
-/usr/local/bin
-```
+`/usr/local/bin`
 
 <sumary>
 
@@ -128,6 +125,7 @@ O bien a nivel del usuario. Añadiendo la variable en
 
 ```
 ~/.bashrc
+
 export IPFS_PATH=/data/ethereum/ipfs
 ```
 
@@ -142,7 +140,7 @@ sudo vim /etc/systemd/system/ipfs.service
 
 Y añadimos el siguiente contenido:
 
-```
+<pre>
 [Unit]
 Description=IPFS Daemon
 After=syslog.target network.target remote-fs.target nss-lookup.target
@@ -155,7 +153,7 @@ User=user
 
 [Install]
 WantedBy=multi-user.target
-```
+</pre>
 
 Lo siguiente sería iniciar la base de datos y archivos de configuración. Para ello ipfs tiene el siguiente comando:
 ```
@@ -166,7 +164,9 @@ Tras esto ya podemos habilitar el servicio para que se arranque automáticamente
 
 ```
 sudo systemclt daemon-reload
+
 sudo systemctl enable ipfs
+
 sudo systemctl start ipfs
 ```
 </details>
@@ -179,27 +179,6 @@ Si no hacemos esto entoces lo que tendríamos sería sólo un nodo local, sin ni
 
 Como nos gusta tener bien cerrado nuestro firewall en nuestro caso hemos necesitado varias líneas de iptables. Todas estas reglas son para la máquina host de nuestro sistema de virtualización (por ejemplo libvirt/KVM)
 
-<pre>
-### Tabla Mangle PREROUTING
-
-iptables -t mangle -A PREROUTING -p tcp -m state --state NEW -m tcp --dport 4001 -j ACCEPT
-iptables -t mangle -A PREROUTING -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT
-
-### Tabla Mangle INPUT
-
-iptables -t mangle -A INPUT -p tcp -m state --state NEW -m tcp --dport 4001 -j ACCEPT
-iptables -t mangle -A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT
-
-### Tabla Filter INPUT
-
-iptables -t filter -A INPUT -p tcp -m state --state NEW -m tcp --dport 4001 -j ACCEPT
-iptables -t filter -A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT
-
-
-### Tabla Nat PREROUTING
-
-iptables -t nat -A PREROUTING -p tcp ! -s 192.168.0.0/16 -m tcp --dport 4001  -j DNAT --to-destination 192.168.122.20:4001
-iptables -t nat -A PREROUTING -p tcp ! -s 192.168.0.0/16 -m tcp --dport 8080  -j DNAT --to-destination 192.168.122.20:8080
-</pre>
+**Consultar [aquí](https://github.com/Colm3na/IPFS#configuración-de-red) el firewall**
 
 Estas 2 úlimas reglas son las que realmente hacen el forward de las peticiones a los puertos de interés desde el host hasta la máquina virtual. Las reglas anteriores son reglas de ACCEPT ya que tenemos por defecto todas las tablas y cadenas de nuestro firewall cerrados (DROP). Si este no es tu caso, quizás no necesites tantas reglas de cortafuego.
