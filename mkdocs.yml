@@ -10,14 +10,14 @@ nav:
   - Ethereum:
     - ¿Qué es Ethereum?: introETH.md
     - Web3.0: web3.md
-  - Meetups:
-    - Meetup DAOs:
-    - Workshop Swarm:
-    - Workshop DAOs con Aragon: 
-    - Workshop Brave publishers:
-    - Workshop ENS:
-    - Workshop ERC20:
-    - Workshop DApps:
+  #- Meetups:
+  #  - Meetup DAOs:
+  #  - Workshop Swarm:
+  #  - Workshop DAOs con Aragon: 
+  #  - Workshop Brave publishers:
+  #  - Workshop ENS:
+  #  - Workshop ERC20:
+  #  - Workshop DApps:
   - IPFS: ipfs.md
   - Cosmos: cosmos.md
   - DAppNode: 
