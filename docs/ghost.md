@@ -10,7 +10,7 @@ En [su página oficial](https://ghost.org/docs/install/ubuntu/) podéis encontra
 
 ## Vamos a configurar la base de datos MySQL:
 
-<pre>
+<pre style="background-color: #bbbbbb; color: green;">
 root@web2:/var/www/ghost# mysql -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
