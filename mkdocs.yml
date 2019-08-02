@@ -7,6 +7,7 @@ site_url: https://github.com/Colm3na/DocsColmena
 nav:
   - Home: index.md
   - Instalación wiki: instalDoc.md
+  - Git: git.md
   - ¿Qué es la blockchain?: introblock.md
   - Ethereum:
     - ¿Qué es Ethereum?: ethblock.md
