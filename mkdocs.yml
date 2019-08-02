@@ -1,12 +1,26 @@
 #Información del sitio:
-site_name: Wiki Colmena
+site_name: Wiki ColmenaLabs
 site_description: Documentación de los proyectos de la Colmena
 site_author: 'ColmenaLabs_svq'
 site_url: https://github.com/Colm3na/DocsColmena
 #Navegación:
 nav:
   - Home: index.md
-  - Instalación wiki: instalacionDoc.md
+  - Instalación wiki: instalDoc.md
+  - Git: git.md
+  - ¿Qué es la blockchain?: introblock.md
+  - Ethereum:
+    - ¿Qué es Ethereum?: ethblock.md
+    - Web3.0: web3.md
+  - Meetups:
+    - Meetup DAOs: meetdao.md
+    - Workshop DAOs con Aragon: daoragon.md
+  #  - Workshop Swarm:
+  #  - Workshop Brave publishers:
+  #  - Workshop ENS:
+  #  - Workshop ERC20:
+  #  - Workshop DApps:
+  - IPFS: ipfs.md
   - Cosmos: cosmos.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
