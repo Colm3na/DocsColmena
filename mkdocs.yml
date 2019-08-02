@@ -43,6 +43,7 @@ nav:
     - Inicio: kava.md
   - Sistemas:
     - Inicio: sistemas.md
+    - Ghost: ghost.md
 #Configuración del tema: 
 theme:
   name: 'rtd-dropdown'
