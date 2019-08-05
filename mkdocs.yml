@@ -30,18 +30,12 @@ nav:
     - Meetup: lightning-network/README.md
     - Bitcoin: lightning-network/1.0_Bitcoin.md
     - SegWit: lightning-network/1.1_SegWit.md
-<<<<<<< HEAD
-    - Lightning Network: lightning-network/2_LightningNetwork.md
-    - Enlaces de interés: lightning-network/3_Resources.md
-    - Comandos para el despliegue: lightning-network/4_Comandos_para_desplegar_LND.md 
-    - Instalación nodo LND y primer contacto: lightning-network/5_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md 
-=======
     - LightningNetwork: lightning-network/2_LightningNetwork.md
     - Sidechains de Bitcoin: lightning-network/3_Sidechains_de_Bitcoin.md
     - Enlaces de interés: lightning-network/4_Resources.md
     - Comandos para el despliegue: lightning-network/5_Comandos_para_desplegar_LND.md
     - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
->>>>>>> 5443315e100767320d7a71533b2d5919767d063e
+    - Infogramas de LND: lightning-network/7_Infogramas.md
   - Polkadot: 
     - Inicio: polkadot.md
   - Cyberd: 
@@ -50,11 +44,7 @@ nav:
     - Inicio: kava.md
   - Sistemas:
     - Inicio: sistemas.md
-<<<<<<< HEAD
-    - MkDocs: instalacionDoc.md
-=======
     - Ghost: ghost.md
->>>>>>> 5443315e100767320d7a71533b2d5919767d063e
 #Configuración del tema: 
 theme:
   name: 'rtd-dropdown'
