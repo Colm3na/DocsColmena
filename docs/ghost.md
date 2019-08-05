@@ -35,9 +35,11 @@ mysql> flush privileges;
 Query OK, 0 rows affected (0.00 sec)
 </pre>
 
-Ahora vamos a crear el usuario y las carpetas necesarias
+Ahora vamos a crear el usuario y las carpetas necesarias.
+Necesitamos 2 usuarios. El usuario que hará la instalación y el usuario que ejecutará el servicio.
 
 <pre>
+root@web2:/var/www# adduser ghost
 root@web2:/var/www# mkdir ghost
 root@web2:/var/www# chown user.ghost ghost
 root@web2:/var/www# su user
@@ -46,20 +48,82 @@ user@web2:/var/www$ cd ghost
 user@web2:/var/www/ghost$ ghost install
 </pre>
 
->mkdocs, version 1.0.4
+Tras la instalación ghost nos creará un servicio de sistema y tratará de arrancarlo.
+En nuestro caso podemos ver el status del servicio de esta manera:
 
-## Usamos [Material](https://squidfunk.github.io/mkdocs-material/) como tema, lo instalamos:
-`pip install mkdocs-material --user`
+<pre>
+root@web2:~# systemctl status ghost_localhost.service 
+● ghost_localhost.service - Ghost systemd service for blog: localhost
+   Loaded: loaded (/var/www/ghost/system/files/ghost_localhost.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2019-08-02 14:53:23 CEST; 2 days ago
+     Docs: https://docs.ghost.org
+ Main PID: 648 (ghost run)
+    Tasks: 18 (limit: 2294)
+   CGroup: /system.slice/ghost_localhost.service
+           ├─648 ghost run
+           └─679 /usr/bin/node current/index.js
+</pre>
 
-## Instalamos dependencias:
-`pip install md-tooltips --user`
+Y el contenido del archivo del servicio es el que sigue. Se ha generado automáticamente, así que no tenemos
+nada que modificar.
 
-## Clonamos el repositorio:
-`git clone https://github.com/Colm3na/DocsColmena.git`
+<pre>
+root@web2:~# cat /lib/systemd/system/ghost_localhost.service
+[Unit]
+Description=Ghost systemd service for blog: localhost
+Documentation=https://docs.ghost.org
 
-## Nos dirigimos a la carpeta del proyecto, e iniciamos el servidor de desarrollo:
-`cd $HOME/DocsColmena/` 
+[Service]
+Type=simple
+WorkingDirectory=/var/www/ghost
+User=999
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/node /usr/bin/ghost run
+Restart=always
 
-`mkdocs serve`
+[Install]
+WantedBy=multi-user.target
+</pre>
 
-> Si abrimos el navegador y nos vamos a la página [http://127.0.0.1:8000/](http://127.0.0.1:8000/) podemos ver la documentación.
+Ya sólo nos queda configurar un virtualhost para servir el blog en un subdominio:
+
+<pre>
+root@web2:~# cat /etc/apache2/sites-available/blog.colmenalabs.org-le-ssl.conf 
+<IfModule mod_ssl.c>
+    <VirtualHost *:443>
+        ServerName blog.colmenalabs.org
+        Alias /.well-known /var/www/ghost
+	#DocumentRoot /var/www/ghost
+        ServerAdmin webmaster@example.com
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	#RequestHeader set X-Forwarded-Proto https
+        ProxyRequests Off
+        <Proxy *>
+          Order deny,allow
+          Allow from all
+        </Proxy>
+        
+        ProxyPass / http://127.0.0.1:2368/
+        ProxyPassReverse / http://127.0.0.1:2368/
+        ProxyPreserveHost   On
+
+        RequestHeader set X-Forwarded-Proto "https"
+        <Location />
+          Order allow,deny
+          Allow from all
+        </Location>
+
+
+    
+SSLCertificateFile /etc/letsencrypt/live/www.colmenalabs.org/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/www.colmenalabs.org/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+</IfModule>
+</pre>
+
+Cómo podéis observar este subdominio funciona mediante un proxy inverso al
+puerto 2368, que es donde nuestro servicio Ghost está esperando conexiones.
+
