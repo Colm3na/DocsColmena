@@ -25,8 +25,8 @@ Ahora ya deberíamos tener la versión más actual de pip instalada.
 
 >mkdocs, version 1.0.4
 
-## En este caso usamos la versión ReadTheDocs [Dropdown](https://github.com/cjsheets/mkdocs-rtd-dropdown), la instalamos:
-`pip install mkdocs-rtd-dropdown --user`
+## Usamos [Material](https://squidfunk.github.io/mkdocs-material/) como tema, lo instalamos:
+`pip install mkdocs-material --user`
 
 ## Instalamos dependencias:
 `pip install md-tooltips --user`

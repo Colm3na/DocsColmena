@@ -1,7 +1,7 @@
 <h1 align="center"> Repositorio con varios scripts y guias para Cosmos</h1>
 
 <p align="center"> 
-<img src="images/cosmos/CosmosSvQ.png">
+<img src="../images/cosmos/CosmosSvQ.png">
 </p>
 
 <p align="center"> Esta información ha sido traducida del repositorio oficial de <a href="https://github.com/cosmos/cosmos-sdk/tree/develop/docs">Cosmos.</a> </p>
@@ -20,7 +20,7 @@ Recuerda que si tienes alguna duda siempre puedes venir a la <a href="https://ww
 
 
 <p align="center"> 
-<img src="images/cosmos/cosmosLogo.png">
+<img src="../images/cosmos/cosmosLogo.png">
 </p>
 
 
