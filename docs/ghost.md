@@ -127,3 +127,58 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 Cómo podéis observar este subdominio funciona mediante un proxy inverso al
 puerto 2368, que es donde nuestro servicio Ghost está esperando conexiones.
 
+También hemos necesitado configurar un servidor de correo para que gestione
+las altas de usuarios, recuperaciones de claves etc...
+
+En este caso hemos utilizado el servicio MailGun, que ofrece hasta 10k emails/més
+de forma gratuita.
+
+El archivo de configuración que tenemos que tocar en este caso está en la carpeta
+/var/www/ghost/
+
+<pre>
+{
+  "url": "http://localhost:2368/",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "ghostuser",
+      "password": "CONTRASEÑA-DE-MYSQL",
+      "database": "ghost_prod"
+    }
+  },
+  "mail": {
+    "transport": "SMTP",
+    "options": {
+      "service": "Mailgun",
+      "host": "smtp.eu.mailgun.org",
+      "auth": {
+        "user": "postmaster@mg.colmenalabs.org",
+        "pass": "CONTRASEÑA-DEL-SMTP"
+      }
+    },
+    "from": "'Colmena Blog' <blog@colmenalabs.org>"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/ghost/content"
+  },
+  "bootstrap-socket": {
+    "port": 8000,
+    "host": "localhost"
+  }
+}
+</pre>
+
+
