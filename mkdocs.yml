@@ -50,6 +50,18 @@ nav:
 #Configuración del tema: 
 theme:
   name: 'material'
+  highlightjs: true
+  hljs_languages:
+      - yaml
+      - rust
+      - bash
+      - json
+      - makefile
+      - markdown
+      - nginx
+      - apache
+      - python
+      - ruby
   feature:
     tabs: false
 #Repositorio original.
