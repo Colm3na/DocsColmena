@@ -1,5 +1,7 @@
 ## ¿Qué es Plasma?
 
+>_Esta información esta traducida del [portal de educacion de Distric0x](https://education.district0x.io/) en concreto el apartado de [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/), así pues **muchas gracias [Distric0x](https://district0x.io)** por esta maravillosa documentación!!_
+
 Plasma es otra solución de escalado de segunda capa de Ethereum en desarrollo. Se espera que sea la segunda solución de escalado completamente desplegada en la red principal de Ethereum después de los State channels. Plasma se refiere a un marco que permite la creación de cadenas de bloques "hijas" que utilizan la cadena principal de Ethereum como una capa de confianza y arbitraje. En Plasma, las cadenas hijas pueden configurarse para que se ajusten a las demandas de casos de uso específicos, específicamente aquellos que no son factibles en Ethereum hoy en día. Las aplicaciones descentralizadas que obligan a los usuarios a incurrir en altas tarifas de transacción son mucho más adecuadas para ejecutarse en Plasma.
 
 ## Plasma vs. State Channels

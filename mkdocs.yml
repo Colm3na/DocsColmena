@@ -11,6 +11,7 @@ nav:
   - ¿Qué es la blockchain?: introblock.md
   - Ethereum:
     - ¿Qué es Ethereum?: ethblock.md
+    - Gas: gas.md
     - Sharding: sharding.md
     - State Channels: statechannel.md
     - Plasma: plasma.md
@@ -79,7 +80,7 @@ extra:
       link: 'https://github.com/Colm3na'
     - type: 'twitter'
       size: 'lg'
-      link: 'https://twitter.com/CoworkLaColmena'
+      link: 'https://twitter.com/ColmenaLabs_svq'
     - type: 'medium'
       size: 'lg'
       link: 'https://medium.com/colmenasvq'

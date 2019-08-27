@@ -1,5 +1,7 @@
 ## ¿Qué son los State Channels?
 
+>_Esta información esta traducida del [portal de educacion de Distric0x](https://education.district0x.io/) en concreto el apartado de [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/), así pues **muchas gracias [Distric0x](https://district0x.io)** por esta maravillosa documentación!!_
+
 Los State channels se refieren al proceso en el que los usuarios realizan transacciones entre sí directamente fuera de la cadena de bloques, u _"off-chain"_, y minimizan en gran medida el uso de operaciones _"on-chain"_. Es una de las soluciones de escalado para Ethereum más interesantes en el desarrollo y el avance más cercano a estar listo para la producción.
 
 Los state channels son muy similares al concepto de canales de pago en la Red de Lightning de Bitcoin, pero en lugar de sólo apoyar los pagos, también soportan 'actualizaciones de estado' generales. Por ejemplo, los votos realizados en el [District Registry](https://education.district0x.io/district0x-specific-topics/understanding-distict0x/the-district-registry/) podrían ser actualizados en un canal estatal y sólo transmitidos a la red Ethereum una vez que todos los votos hayan sido recopilados. Esto aumenta el número de desarrolladores de computación que pueden salir de la cadena.
