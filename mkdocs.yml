@@ -49,7 +49,7 @@ nav:
     - Ghost: ghost.md
 #Configuración del tema: 
 theme:
-  name: 'rtd-dropdown'
+  name: 'material'
   feature:
     tabs: false
 #Repositorio original.
