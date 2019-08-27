@@ -20,5 +20,6 @@
 
 ###Rewards:
 
+###Slash:
 
 ###¿Qué pasa cuando hacemos una delegación?
