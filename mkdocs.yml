@@ -21,7 +21,9 @@ nav:
   #  - Workshop ERC20:
   #  - Workshop DApps:
   - IPFS: ipfs.md
-  - Cosmos: cosmos.md
+  - Cosmos: 
+    - Cosmos: cosmos.md
+    - Terminología: terminos.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
     - DappNode+WIFI: DAppNodeWIFI.md
