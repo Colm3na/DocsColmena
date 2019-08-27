@@ -12,6 +12,7 @@ nav:
   - Ethereum:
     - ¿Qué es Ethereum?: ethblock.md
     - Sharding: sharding.md
+    - State Channels: statechannel.md
     - Web3.0: web3.md
   - Meetups:
     - Meetup DAOs: meetdao.md
