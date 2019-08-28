@@ -20,7 +20,7 @@ nav:
     - Workshop DAOs con Aragon: daoragon.md
     - Workshop Swarm: swarm.md
     - Workshop Brave publishers: brave.md
-  #  - Workshop ENS:
+    - Workshop ENS: ens.md
   #  - Workshop ERC20:
   #  - Workshop DApps:
   - Bitcoin:
