@@ -21,7 +21,7 @@ nav:
     - Workshop Swarm: swarm.md
     - Workshop Brave publishers: brave.md
     - Workshop ENS: ens.md
-  #  - Workshop ERC20:
+    - Workshop ERC20: erc20.md
   #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md
