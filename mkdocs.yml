@@ -7,24 +7,22 @@ site_url: https://github.com/Colm3na/DocsColmena
 nav:
   - Home: index.md
   - Instalación wiki: instalDoc.md
-  - Git: git.md
   - ¿Qué es la blockchain?: introblock.md
   - Ethereum:
     - ¿Qué es Ethereum?: ethblock.md
+    - Gas: gas.md
+    - Sharding: sharding.md
+    - State Channels: statechannel.md
+    - Plasma: plasma.md
     - Web3.0: web3.md
   - Meetups:
     - Meetup DAOs: meetdao.md
     - Workshop DAOs con Aragon: daoragon.md
-  #  - Workshop Swarm:
-  #  - Workshop Brave publishers:
-  #  - Workshop ENS:
-  #  - Workshop ERC20:
+    - Workshop Swarm: swarm.md
+    - Workshop Brave publishers: brave.md
+    - Workshop ENS: ens.md
+    - Workshop ERC20: erc20.md
   #  - Workshop DApps:
-  - IPFS: ipfs.md
-  - Cosmos: cosmos.md
-  - DAppNode: 
-    - Inicio: DAppNodeCosmos.md
-    - DappNode+WIFI: DAppNodeWIFI.md
   - Bitcoin:
     - Inicio: lightning-index.md
     - Meetup: lightning-network/README.md
@@ -36,8 +34,17 @@ nav:
     - Comandos para el despliegue: lightning-network/5_Comandos_para_desplegar_LND.md
     - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
     - Infogramas de LND: lightning-network/7_Infogramas.md
+  - Locha: locha.md
+  - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md
+    - kusama: kusama.md
+  - DAppNode: 
+    - Inicio: DAppNodeCosmos.md
+    - DappNode+WIFI: DAppNodeWIFI.md
+  - Cosmos: 
+    - Cosmos: cosmos.md
+    - Terminología: terminos.md
   - Cyberd: 
     - Inicio: cyberd.md
   - Kava: 
@@ -45,9 +52,22 @@ nav:
   - Sistemas:
     - Inicio: sistemas.md
     - Ghost: ghost.md
+  - Git: git.md
 #Configuración del tema: 
 theme:
-  name: 'rtd-dropdown'
+  name: 'material'
+  highlightjs: true
+  hljs_languages:
+      - yaml
+      - rust
+      - bash
+      - json
+      - makefile
+      - markdown
+      - nginx
+      - apache
+      - python
+      - ruby
   feature:
     tabs: false
 #Repositorio original.
@@ -62,7 +82,7 @@ extra:
       link: 'https://github.com/Colm3na'
     - type: 'twitter'
       size: 'lg'
-      link: 'https://twitter.com/CoworkLaColmena'
+      link: 'https://twitter.com/ColmenaLabs_svq'
     - type: 'medium'
       size: 'lg'
       link: 'https://medium.com/colmenasvq'
