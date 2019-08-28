@@ -18,7 +18,7 @@ nav:
   - Meetups:
     - Meetup DAOs: meetdao.md
     - Workshop DAOs con Aragon: daoragon.md
-  #  - Workshop Swarm:
+    - Workshop Swarm: swarm.md
   #  - Workshop Brave publishers:
   #  - Workshop ENS:
   #  - Workshop ERC20:
