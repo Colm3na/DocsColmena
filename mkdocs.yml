@@ -38,6 +38,7 @@ nav:
   - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md
+    - kusama: kusama.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
     - DappNode+WIFI: DAppNodeWIFI.md
