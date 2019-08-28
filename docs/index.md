@@ -20,4 +20,4 @@ Documentación sobre los proyectos realizados en la [Colmena](https://www.colmen
 
 - [Aquí](cyberd.md) puedes encontrar la documentación de Cyberd.
 
->Si quieres apoyar esta wiki, sólo tienes que usar Brave cuando la visites, o enviarnos una _"propina"_.
+>Si quieres apoyar esta wiki, sólo tienes que usar Brave cuando la visites, o enviarnos una _"propina"_ desde Brave.
