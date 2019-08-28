@@ -34,6 +34,7 @@ nav:
     - Comandos para el despliegue: lightning-network/5_Comandos_para_desplegar_LND.md
     - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
     - Infogramas de LND: lightning-network/7_Infogramas.md
+  - Locha: locha.md
   - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md
