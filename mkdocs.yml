@@ -22,6 +22,8 @@ nav:
     - Workshop Brave publishers: brave.md
     - Workshop ENS: ens.md
     - Workshop ERC20: erc20.md
+  - Proof of Stake:
+    - ¿Qué es PoS?: pos.md
   #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md
