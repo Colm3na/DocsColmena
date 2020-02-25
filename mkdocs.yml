@@ -24,6 +24,10 @@ nav:
     - Workshop ERC20: erc20.md
   - Proof of Stake:
     - ¿Qué es PoS?: pos.md
+  - Colony:
+    - ¿Qué es Colony?: colony.md
+    - ¿Cómo unirse a una colonia?: joincolony.md
+    - ¿Cómo crear tareas en Colony?: createtask.md
   #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md
@@ -88,3 +92,6 @@ extra:
     - type: 'medium'
       size: 'lg'
       link: 'https://medium.com/colmenasvq'
+    - type: 'blog'
+      syze: 'lg'
+      link: 'https://blog.colmenalabs.org/'
