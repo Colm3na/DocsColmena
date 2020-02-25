@@ -22,7 +22,7 @@ La primera versión viene con:
 - **Token Issuance:** Emisión y gestión de tokens. Los tokens empiezan bloqueados, así que tu token no puede ser intercambiado hasta que estés listo.
 - **BYO token:** ¿Tenemos nuestro propio token? Puedes añadirle utilidad rápidamente convirtiéndolo en el símbolo nativo.
 - **Domains:** Son como equipos o departamentos, podemos usarlos para organizar las tareas.
-- **Simple Tasks:** Aquí podemos definir trabajos, plazos y habilidades; discutir el trabajo, asignarlo a un trabajador y pagarle en su token de Colony, ETH, DAI o cualquier otro ERC20. Simple tasks utiliza un mecanismo de pago de una sola transaccion (menos FEEs en tx's). En breves habrá otros mecanismos de compensación "menos fiables" (puesto en su web pero no se a q se refiere).
+- **Simple Tasks:** Aquí podemos definir trabajos, plazos y habilidades; discutir el trabajo, asignarlo a un trabajador y pagarle en su token de Colony, ETH, DAI o cualquier otro ERC20. Simple tasks utiliza un mecanismo de pago de una sola transaccion (menos FEEs en tx's). En breves habrá otros mecanismos de compensación "menos fiables".
 - **Funding Pots:** Cada "dominio" tiene su propio fondo de financiación en el cual se puede presentar un presupuesto para el trabajo necesario en ese "dominio".
 - **Permissions:** Dar a los compañeros (o a smartContracts) permisos para crear y financiar tareas en "dominios" individuales a partir del fondo de financiación del dominio.
 - **Reputation:** Al realizar un trabajo se gana reputación con las habilidades que se usaron y los dominios en los que se contribuyeron. La reputación está presente y funcional a nivel de Colony, pero aún no está en la App, viene en poco.
