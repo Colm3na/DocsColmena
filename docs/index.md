@@ -1,25 +1,27 @@
 # Documentación Colmena
 
-Documentación sobre los proyectos realizados en la [Colmena](https://www.colmenalabs.org/).
+Documentación sobre los proyectos realizados en la [Colmena](https://www.colmenalabs.org/)
 
-- [Aquí](instalDoc.md) tienes los pasos para ver la documentación en tu ordenador.
+- [Instalación wiki](instalDoc.md)
 
-- [Aquí](ethblock.md) puedes encontrar información de Ethereum.
+- [Qué es Ethereum](ethblock.md)
 
-- [Aquí](introblock.md) puedes encontrar información sobre la tecnología blockchain.
+- [Qué es la blockchain](introblock.md)
 
-- [Aquí](DAppNodeCosmos.md) puedes encontrar la documentación sobre el paquete de Cosmos para [DAppNode](https://github.com/dappnode/DAppNode).
+- [DAppNode, paquete Cosmos](DAppNodeCosmos.md)  
 
-- [Aquí](lightning-index.md) puedes encontrar la documentación para la Lightning Network.
+- [DAppNode](https://github.com/dappnode/DAppNode)
 
-- [Aquí](colony.md) puedes encontrar documentación de Colony.
+- [Lightning Network](lightning-index.md)
 
-- [Aquí](cosmos.md) puedes encontrar la documentación para Cosmos.
+- [Colony](colony.md)
 
-- [Aquí](polkadot.md) puedes encontrar la documentación para Polkadot.
+- [Cosmos](cosmos.md)
 
-- [Aquí](sistemas.md) puedes encontrar la documentación sobre Sistemas.
+- [Polkadot](polkadot.md)
 
-- [Aquí](cyberd.md) puedes encontrar la documentación de Cyberd.
+- [SysAdmin](sistemas.md) 
+
+- [Cyberd](cyberd.md)
 
 >Si quieres apoyar esta wiki, sólo tienes que usar Brave cuando la visites, o enviarnos una _"propina"_ desde Brave.
