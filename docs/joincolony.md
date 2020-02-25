@@ -1,4 +1,4 @@
-### Cómo unirse a una Colonia _(necesitamos algunos fondos, esta guía está realizada para la Colonia de [Polkastats](https://polkastats.io/))_:
+### Cómo unirse a una Colonia _(necesitaremos algunos fondos, esta guía está realizada para la Colonia de [Polkastats](https://polkastats.io/))_:
 
 1. Desbloqueamos [Metamask](https://metamask.io/).
 
@@ -37,6 +37,8 @@ _toca esperar que la transacción se confirme, podemos comprobarlo metiendo nues
 
 10. Una vez que estamos dentro de nuestra colonia en la parte superior izquierda tenemos el nombre de la colonia y su _identicon_, hacemos clic en la estrella del _identicon_ (si dejamos el  ratón encima nos aparece `Join the Colony`)
 
-![colony7](images/colony/colonyPolkastats.gif)
+<p align="center"> 
+<img src="https://user-images.githubusercontent.com/17170149/74880417-76ebea80-536b-11ea-943f-297c2f5cf71e.gif">
+</p>
 
 Ya estamos dentro de la colonia, welcome to hell!! :fire: 
