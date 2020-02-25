@@ -26,6 +26,8 @@ nav:
     - ¿Qué es PoS?: pos.md
   - Colony:
     - ¿Qué es Colony?: colony.md
+    - ¿Cómo unirse a una colonia?: joincolony.md
+    - ¿Cómo crear tareas en Colony?: createtask.md
   #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md

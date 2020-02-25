@@ -12,6 +12,8 @@ Documentación sobre los proyectos realizados en la [Colmena](https://www.colmen
 
 - [Aquí](lightning-index.md) puedes encontrar la documentación para la Lightning Network.
 
+- [Aquí](colony.md) puedes encontrar documentación de Colony.
+
 - [Aquí](cosmos.md) puedes encontrar la documentación para Cosmos.
 
 - [Aquí](polkadot.md) puedes encontrar la documentación para Polkadot.
