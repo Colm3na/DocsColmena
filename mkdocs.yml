@@ -28,6 +28,7 @@ nav:
     - ¿Qué es Colony?: colony.md
     - ¿Cómo unirse a una colonia?: joincolony.md
     - ¿Cómo crear tareas en Colony?: createtask.md
+    - ¿Cómo añadir permisos?: addpermissionsColony.md
   #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md
