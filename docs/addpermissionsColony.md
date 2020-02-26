@@ -1,4 +1,4 @@
-### Cómo añadir permisos a un usuari@ en nuestra colonia
+### Cómo añadir permisos a un usuari@ en nuestra colonia.
 
 >_Antes de empezar como siempre debemos tener Metamask desbloqueado e iniciar la sesión con nuestra wallet de Ethereum usada anteriormente para la colonia; para este paso necesitaremos algunos ETHs en la wallet para la comisión de la tx._
 
@@ -10,11 +10,11 @@
 
 ![apc2](images/colony/apc2.png)
 
-* Elegimos el dominio en el que queramos modificar los permisos del usuari@ haciendo clic en el desplegable de la derecha.
+* Elegimos el dominio en el que queramos modificar los permisos del usuari@ haciendo clic en el desplegable de la derecha:
 
 ![apc3](images/colony/apc3.png)
 
-* Seleccionamos `Add Role`
+* Seleccionamos `Add Role`:
 
 ![apc4](images/colony/apc4.png)
 
@@ -30,11 +30,11 @@
 
 ![apc7](images/colony/apc7.png)
 
-* De nuevo Metamask nos avisa por última vez por si queremos modificar la comisión de la tx:
+* De nuevo Metamask nos avisa por última vez por si queremos modificar la comisión de la tx lo modificamos en caso de necesitarlo y confirmamos:
 
 ![apc8](images/colony/apc8.png)
 
-* Una vez que la tx haya sido confirmada, el usuari@ tendrá los permisos.
+* Una vez que la tx haya sido confirmada, el usuari@ tendrá los permisos:
 
 ![apc9](images/colony/apc9.png)
 

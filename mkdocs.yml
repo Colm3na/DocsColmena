@@ -15,6 +15,7 @@ nav:
     - State Channels: statechannel.md
     - Plasma: plasma.md
     - Web3.0: web3.md
+    - workshop DAO Aragon: daoaragon.md
   - Meetups:
     - Meetup DAOs: meetdao.md
     - Workshop DAOs con Aragon: daoragon.md
@@ -29,7 +30,6 @@ nav:
     - ¿Cómo unirse a una colonia?: joincolony.md
     - ¿Cómo crear tareas en Colony?: createtask.md
     - ¿Cómo añadir permisos?: addpermissionsColony.md
-  #  - Workshop DApps:
   - Bitcoin:
     - Inicio: lightning-index.md
     - Meetup: lightning-network/README.md
