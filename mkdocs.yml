@@ -28,7 +28,7 @@ nav:
     - ¿Qué es Colony?: colony.md
     - ¿Cómo unirse a una colonia?: joincolony.md
     - ¿Cómo crear tareas en Colony?: createtask.md
-  #  - Workshop DApps:
+    - ¿Cómo añadir permisos?: addpermissionsColony.md
   - Bitcoin:
     - Inicio: lightning-index.md
     - Meetup: lightning-network/README.md
@@ -41,6 +41,7 @@ nav:
     - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
     - Infogramas de LND: lightning-network/7_Infogramas.md
   - Locha: locha.md
+  - Kyber: howtokyber.md
   - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md

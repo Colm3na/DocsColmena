@@ -16,12 +16,24 @@ Documentación sobre los proyectos realizados en la [Colmena](https://www.colmen
 
 - [Colony](colony.md)
 
+- [Kyber](howtokyber.md)
+
+- [Proof of Stake](pos.md)
+
+- [Polkadot](polkadot.md)
+
+- [Kusama](kusama.md)
+
 - [Cosmos](cosmos.md)
 
 - [Polkadot](polkadot.md)
 
-- [SysAdmin](sistemas.md) 
-
 - [Cyberd](cyberd.md)
+
+- [Kava](kava.md)
+
+- [IPFS](ipfs.md)
+
+- [SysAdmin](sistemas.md) 
 
 >Si quieres apoyar esta wiki, sólo tienes que usar Brave cuando la visites, o enviarnos una _"propina"_ desde Brave.
