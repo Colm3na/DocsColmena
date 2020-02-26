@@ -15,7 +15,6 @@ nav:
     - State Channels: statechannel.md
     - Plasma: plasma.md
     - Web3.0: web3.md
-    - workshop DAO Aragon: daoaragon.md
   - Meetups:
     - Meetup DAOs: meetdao.md
     - Workshop DAOs con Aragon: daoragon.md
@@ -42,6 +41,7 @@ nav:
     - Instalación nodo LND y primer contacto: lightning-network/6_Guía_definitiva_para_la_instalación_un_nodo_de_LND_y_primeras_interacciones.md
     - Infogramas de LND: lightning-network/7_Infogramas.md
   - Locha: locha.md
+  - Kyber: howtokyber.md
   - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md
