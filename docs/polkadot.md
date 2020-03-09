@@ -10,13 +10,17 @@
 
 <p align="center">Toda la documentación aquí traducida puedes encontrarla en la <a href="https://github.com/w3f/polkadot-wiki">wiki oficial de Polkadot</a> o en su <a href="https://wiki.polkadot.network/en/latest/">página web</a>.</p>
 
-[Aqui](https://github.com/Colm3na/Polkadot/tree/master/firewall) puedes encontrar el firewall.
+---
+
+<p align="center"><a href="https://github.com/Colm3na/Polkadot/tree/master/firewall">Aqui</a> puedes encontrar el firewall.</p>
+
+---
+
+> [Estos](claimDots.md) son los pasos necesarios para reclamar tus DOTs _(basado en la guía oficial de Polkadot, puedes encontrarla [aquí](https://claims.polkadot.network/))_.
 
 ---
 
 ## Como ser validador
-
----
 
 **_La [guía original](https://github.com/w3f/polkadot-wiki/blob/master/docs/polkadot/node/guides/how-to-validate.md) ha sido realizada por [Thibaut](https://github.com/Tbaut)._**
 

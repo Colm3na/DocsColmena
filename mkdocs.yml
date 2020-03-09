@@ -46,6 +46,7 @@ nav:
   - IPFS: ipfs.md
   - Polkadot: 
     - Inicio: polkadot.md
+    - Reclamar tus DOTs: claimDots.md
     - kusama: kusama.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
