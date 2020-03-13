@@ -26,8 +26,6 @@ Documentación sobre los proyectos realizados en la [Colmena](https://www.colmen
 
 - [Cosmos](cosmos.md)
 
-- [Polkadot](polkadot.md)
-
 - [Cyberd](cyberd.md)
 
 - [Kava](kava.md)
