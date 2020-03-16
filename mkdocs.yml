@@ -47,8 +47,9 @@ nav:
   - Polkadot: 
     - Inicio: polkadot.md
     - Reclamar tus DOTs: claimDots.md
-    - ¿Cómo votar en Polkadot?: votePolkadot.md
+  - Kusama:
     - kusama: kusama.md
+    - ¿Cómo votar en Kusama?: votekusama.md
   - DAppNode: 
     - Inicio: DAppNodeCosmos.md
     - DappNode+WIFI: DAppNodeWIFI.md
