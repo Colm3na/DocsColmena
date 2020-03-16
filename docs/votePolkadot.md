@@ -1,4 +1,4 @@
-# Aquí se describen los pasos necesarios para votar en Kusama
+# Aquí se describen los pasos necesarios para votar en Kusama usando Commonwealth
 
 ### ¿Qué necesitas para el proceso?
 
@@ -6,9 +6,11 @@
 
 - Una cuenta en [Commonwealth](https://commonwealth.im)
 
-### Enlazar nuestra wallet de Kusama en [Commonwealth](https://commonwealth.im)
+- Fondos para realizar la transacción _(`KSMs` en el caso de Kusama o `DOTs` en Polkadot)_.
 
-Para enlazar nuestra cuenta nos dirigimos a [Commonwealth-Kusama](https://commonwealth.im/kusama/) y hacemos clic en `Login` y seleccionamos `Log in with KSM wallet`.
+### Enlazar nuestra wallet de Kusama con [Commonwealth](https://commonwealth.im)
+
+Para enlazar nuestra cuenta nos dirigimos a [Commonwealth - Kusama](https://commonwealth.im/kusama/), hacemos clic en `Login` y seleccionamos `Log in with KSM wallet`.
 
 ![vp1](images/polkadot/vp1.png)
 
@@ -24,25 +26,31 @@ Aceptamos el mensaje advirtiéndonos de que esta web necesita permisos para inte
 
 ![vp4](images/polkadot/vp4.png)
 
-Si tenemos varias wallets, seleccionamos la que queramos usar para la votación, la desbloqueamos con nuestra contraseña y hacemos clic en `Sign the transaction`.
+Si tenemos varias wallets, seleccionamos la que queramos usar para la votación. La desbloqueamos con nuestra contraseña y hacemos clic en `Sign the transaction`.
 
 ![vp5](images/polkadot/vp5.png)
 
 ---
 
->Si lo deseamos, rellenamos nuestro perfil en Commonwealth introduciendo los valores que queramos y hacemos clic en `Save profile to continue`, **esto no es necesario y podemos ser anónimos si lo deseamos**. _Para la guía se usará la wallet de [DelegaNetworks](https://polkadot.js.org/apps/#/staking/query/CoqysGbay3t3Q7hXgEmGJJquhYYpo8PqLwvW1WsUwR7KvXm) por transparencia_.
+>Si lo deseamos, rellenamos nuestro perfil en Commonwealth introduciendo la información que queramos y hacemos clic en `Save profile to continue`, **esto no es necesario y podemos ser anónimos si lo deseamos, recordad que cualquier dato aquí será público**. _Para la guía se usará la wallet de [DelegaNetworks](https://polkadot.js.org/apps/#/staking/query/CoqysGbay3t3Q7hXgEmGJJquhYYpo8PqLwvW1WsUwR7KvXm) por transparencia_.
 
 > ![vp6](images/polkadot/vp6.png)
 
 ---
 
-Una vez que tenemos la wallet conectada en `Commonwealth` y hacemos clic en `Proposals` podemos ver las diferentes opciones. Para la guía seleccionamos el referéndum `#33 staking.setValidatorcount`
+Una vez que tenemos la wallet conectada en `Commonwealth` y hacemos clic en `Proposals` podemos ver las diferentes opciones. 
+
+Para la guía seleccionamos el referéndum `#33 staking.setValidatorcount`
 
 ![vp7](images/polkadot/vp7.png)
 
->_Podemos escribir algun texto en [Markdown](https://es.wikipedia.org/wiki/Markdown) acerca de la decisión que vayamos a tomar pero no es necesario, para ello escribimos lo que deseemos y hacemos clic en `Post comment`._
+---
+
+>_Podemos escribir algun texto en [Markdown](https://es.wikipedia.org/wiki/Markdown) acerca de la decisión que vayamos a tomar pero no es necesario, para ello escribimos lo que deseemos y hacemos clic en `Post comment`. Si usamos Markdown debemos seleccionarlo, aparece justo arriba del texto y podemos elegir `Rich Text` o `Markdown`._
 
 >![vp8](images/polkadot/vp8.png)
+
+---
 
 Hacemos clic en `Vote yes` _(o en `Vote no` si queremos votar que no)_
 
@@ -56,7 +64,7 @@ Introducimos la contraseña de nuestra wallet y hacemos clic en `Sign the transa
 
 ![vp11](images/polkadot/vp11.png)
 
-Esperamos que la transacción sea confirmada por la red.
+Esperamos que la transacción sea confirmada por la red e introducida en el bloque.
 
 ![vp12](images/polkadot/vp12.png)
 
@@ -65,7 +73,7 @@ Una vez que nuestra transacción se haya incluido en el bloque podemos ver la in
 ![vp13](images/polkadot/vp13.png)
 
 
-En la página de [Commonwealth para Kusama](https://commonwealth.im/kusama/proposal/referendum/33-stakingsetvalidatorcount333) en el apartado del referéndum, justo abajo a la derecha podemos ver los que ya han votado y qué han votado.
+En la página de [Commonwealth para Kusama](https://commonwealth.im/kusama/proposal/referendum/33-stakingsetvalidatorcount333) en el apartado de referéndum _(abajo a la derecha)_ podemos ver los que ya han votado y qué han votado.
 
 ![vp14](images/polkadot/vp14.png)
 
@@ -78,5 +86,11 @@ En la página de [Commonwealth para Kusama](https://commonwealth.im/kusama/propo
 > - [Wiki](https://wiki.polkadot.network/docs/en/) de Polkadot.
 
 > - [Polkadot.js](https://polkadot.js.org/apps/#/explorer).
+
+> - Apartado para los [`DOTs`](https://wiki.polkadot.network/docs/en/learn-DOT) en la wiki de Polkadot.
+
+> - [Cómo crear una wallet para Polkadot](https://wiki.colmenalabs.org/claimDots/) usando el plugin.
+
+> - Cómo [importar una wallet de Polkadot](https://wiki.colmenalabs.org/claimDots/) usando el plugin.
 
 ---
