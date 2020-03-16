@@ -35,3 +35,5 @@ Documentación sobre los proyectos realizados en la [Colmena](https://www.colmen
 - [SysAdmin](sistemas.md) 
 
 >Si quieres apoyar esta wiki, sólo tienes que usar Brave cuando la visites, o enviarnos una _"propina"_ desde Brave.
+
+>Poner una estrella en el repo nos ayuda a seguir realizando este trabajo.
