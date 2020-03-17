@@ -47,6 +47,7 @@ nav:
   - Polkadot: 
     - Inicio: polkadot.md
     - Reclamar tus DOTs: claimDots.md
+    - Glosario: glosario.md
   - Kusama:
     - kusama: kusama.md
     - ¿Cómo votar en Kusama?: votekusama.md
