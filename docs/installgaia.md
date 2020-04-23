@@ -1,6 +1,6 @@
 # Instalación de Gaia
 
-Esta guía le explicará como instalar los puntos de entrada `gaiad` y `gaiacli` en su sistema. Con esto instalado en su servidor, puede participar en la red principal como un [Full Node](./join-mainnet.md) o como un [Validador](../validators/validator-setup.md).
+Esta guía le explicará como instalar los puntos de entrada `gaiad` y `gaiacli` en su sistema. Con esto instalado en su servidor, puede participar en la red principal como un [Full Node](./mainnet.md) o como un Validador.
 
 ## Instalación de Go
 
