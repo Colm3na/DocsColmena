@@ -5,7 +5,7 @@ Vea el [repositorio para el lanzamiento](https://github.com/cosmos/launch) para 
 :::
 
 :::aviso
-**Necesitará [instalar gaia](./installation.md) antes de avanzar más**
+**Necesitará [instalar gaia](./installgaia.md) antes de avanzar más**
 :::
 
 ## Configurando un nuevo nodo
@@ -59,7 +59,7 @@ curl https://raw.githubusercontent.com/cosmos/launch/master/genesis.json > $HOME
 Nota: usamos el directorio `latest` en el [repositorio de lanzamiento](https://github.com/cosmos/launch) que contiene detalles para la red principal como la última versión y el archivo de génesis.
 
 :::consejo
-Si en cambio quiere conectarse a la red de pruebas pública, haga clic [aquí](./join-testnet.md)
+Si en cambio quiere conectarse a la red de pruebas pública, haga clic [aquí](https://github.com/cosmos/gaia/tree/main/networks)
 :::
 
 Para verificar la validez de la configuración:
