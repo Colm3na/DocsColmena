@@ -15,6 +15,7 @@ nav:
     - State Channels: statechannel.md
     - Plasma: plasma.md
     - Web3.0: web3.md
+    - FAQ-ETH2.0: faqeth.md 
   - Meetups:
     - Meetup DAOs: meetdao.md
     - Workshop DAOs con Aragon: daoragon.md
